@@ -27,7 +27,7 @@ function spl_option_page() {
 }
 
 
-if ( ! is_admin() ) {
+if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
   wp_enqueue_script( 'preloader',  plugins_url('assets/js/spl_preloader.js', __FILE__), array('jquery'));
   wp_enqueue_style( 'preloader',  plugins_url('assets/css/spl_preloader.css', __FILE__));
 
