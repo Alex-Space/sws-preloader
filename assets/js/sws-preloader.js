@@ -3,5 +3,5 @@ jQuery(window).load(function() {
     jQuery('.preloader').fadeOut(500);
     jQuery('html').css("cssText", "overflow: visible !important;");
   }
-  setTimeout( hidePreloader, 1500);
+  setTimeout( hidePreloader, 1500); 
 });

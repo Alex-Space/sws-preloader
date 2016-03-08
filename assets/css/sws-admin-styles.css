@@ -1,0 +1,121 @@
+/* Color picker */
+.wp-picker-holder {
+	position: absolute;
+}
+
+/* Select 2 */
+.select2 {
+	min-width: 220px;
+}
+
+.sws-select-color-box:before {
+	width: 14px;
+	height: 14px;
+	border: 1px solid #585858;
+	display: inline-block;
+	content: '';
+	vertical-align: top;
+	margin: 2px 5px 0 0;
+}
+
+.sws-preloader-black:before {
+	background: #000;
+}
+
+.sws-preloader-light-grey:before {
+	background: #EEEEEE;
+}
+
+.sws-preloader-light-red:before {
+	background: #ff7c61;
+}
+
+.sws-preloader-orange:before {
+	background: #e19a2e;
+}
+
+.sws-preloader-ligh-blue:before {
+	background: #429ace;
+}
+
+.sws-preloader-purple:before {
+	background: #635684;
+}
+
+.sws-preloader-dirty-blue:before {
+	background: #2e425d;
+}
+
+.sws-preloader-green:before {
+	background: #bbd140;
+}
+
+.sws-preloader-dark-blue:before {
+	background: #00172a;
+}
+
+.sws-preloader-light-green:before {
+	background: #c4ebe8;
+}
+
+.sws-preloader-pale-blue:before {
+	background: #e3f4fd;
+}
+
+.sws-preloader-white:before {
+	background: #FFF;
+}
+
+.sws-preloader-gray-blue:before {
+	background: #676D89;
+}
+
+.sws-preloader-yellow:before {
+	background: #FFD87B;
+}
+
+.select2-selection__rendered .sws-select-color-box:before {
+	vertical-align: middle;
+	margin: -2px 5px 0 0;
+}
+
+.select2-selection {
+	outline: none;
+}
+
+.select2-results__option {
+	margin-bottom: 0;
+}
+
+/* Options table */
+
+.form-table th {
+	min-width: 200px;
+}
+
+.sws-color-picker-inline .wp-picker-container {
+	position: relative;
+	top: 4px;
+	margin-left: 5px;
+	display: inline;
+}
+
+.form-table input.tog, 
+.form-table input[type=radio] {
+	margin-top: 0;
+}
+
+.sws-header-icon:before {
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+	margin-right: 5px;
+}
+
+.custom-preloader {
+	width: 160px;
+}
+
+.sws-invisible-input {
+	display: none;
+}
