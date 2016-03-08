@@ -11,11 +11,14 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 		
 		switch ( $image_with_bg ) {
 			
-			case 'fire.gif':
 			case 'yellow-r.gif':
 				$bg_color = '#000';
 				break;
 
+			case 'two-iridescent-drops.gif':
+			case 'lazy-human-dance.gif':
+			case 'runing-clock.gif':
+			case 'red-sign-intro.gif':
 			case 'boy-and-girl.gif':
 			case 'color-splash-wheel.gif':
 			case 'three-color-gears.gif':
@@ -26,6 +29,30 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 				$bg_color = '#fff';
 				break;
 
+			case 'double-whell-with-shadow.gif':
+				$bg_color = '#fffffb';
+				break;
+			
+			case 'fire.gif':
+				$bg_color = '#18191b';
+				break;
+				
+			case 'fire-2.gif':
+				$bg_color = '#100010';
+				break;
+			
+			case 'rotating-ball-loading.gif':
+				$bg_color = '#dee1e2';
+				break;
+			
+			case 'planet-earth.gif':
+				$bg_color = '#e3f4fd';
+				break;
+			
+			case 'changing-shapes.gif':
+				$bg_color = '#9fe2dd';
+				break;
+			
 			case 'drop.gif':
 				$bg_color = '#222222';
 				break;
@@ -82,6 +109,11 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 				$bg_color = '#e3f4fd';
 				break;
 
+			case 'space-rocket-charging.gif':
+				$bg_color = '#28292e';
+				break;
+
+			case 'hexagonal-fractal.gif':
 			case 'red-monster.gif':
 				$bg_color = '#eeeeee';
 				break;

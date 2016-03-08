@@ -101,6 +101,7 @@ function sws_option_page(){
 									<option value="drop.gif" class="sws-preloader-black" <?php sws_set_selected( 'drop.gif' ); ?>>Drop</option>
 									<option value="bulb.gif" class="sws-preloader-black" <?php sws_set_selected( 'bulb.gif' ); ?>>Bulb</option>
 									<option value="fire.gif" class="sws-preloader-black" <?php sws_set_selected( 'fire.gif' ); ?>>Fire</option>
+									<option value="fire-2.gif" class="sws-preloader-black" <?php sws_set_selected( 'fire-2.gif' ); ?>>Fire 2</option>
 									<option value="bubble-breathing.gif" class="sws-preloader-black" <?php sws_set_selected( 'bubble-breathing.gif' ); ?>>Breathing bubble</option>
 									<option value="crazy-geometry.gif" class="sws-preloader-black" <?php sws_set_selected( 'crazy-geometry.gif' ); ?>>Crazy geometry</option>
 									<option value="yellow-r.gif" class="sws-preloader-black" <?php sws_set_selected( 'yellow-r.gif' ); ?>>Yellow R</option>
@@ -109,6 +110,7 @@ function sws_option_page(){
 									<option value="hexagons-in-round.gif" class="sws-preloader-black" <?php sws_set_selected( 'hexagons-in-round.gif' ); ?>>Hexagons in round</option>
 									<option value="ruby-rotating.gif" class="sws-preloader-dark-blue" <?php sws_set_selected( 'ruby-rotating.gif' ); ?>>Ruby rotating</option>
 									<option value="pink-dots.gif" class="sws-preloader-dark-blue" <?php sws_set_selected( 'pink-dots.gif' ); ?>>Pink dots</option>
+									<option value="space-rocket-charging.gif" class="sws-preloader-dark-blue" <?php sws_set_selected( 'space-rocket-charging.gif' ); ?>>Space rocket charging</option>
 
 								</optgroup>
 								<optgroup label="Light background">
@@ -125,6 +127,14 @@ function sws_option_page(){
 									<option value="fried-eggs.gif" class="sws-preloader-light-grey" <?php sws_set_selected( 'fried-eggs.gif' ); ?>>Fried eggs</option>
 									<option value="three-light-green-gears.gif" class="sws-preloader-pale-blue" <?php sws_set_selected( 'three-light-green-gears.gif' ); ?>>Three light green gears</option>
 									<option value="red-monster.gif" class="sws-preloader-light-grey" <?php sws_set_selected( 'red-monster.gif' ); ?>>Red monster</option>
+									<option value="red-sign-intro.gif" class="sws-preloader-white" <?php sws_set_selected( 'red-sign-intro.gif' ); ?>>Red sign intro</option>
+									<option value="lazy-human-dance.gif" class="sws-preloader-white" <?php sws_set_selected( 'lazy-human-dance.gif' ); ?>>Lazy human dance</option>
+									<option value="runing-clock.gif" class="sws-preloader-white" <?php sws_set_selected( 'runing-clock.gif' ); ?>>Runing clock</option>
+									<option value="two-iridescent-drops.gif" class="sws-preloader-white" <?php sws_set_selected( 'two-iridescent-drops.gif' ); ?>>Two iridescent drops</option>
+									<option value="double-whell-with-shadow.gif" class="sws-preloader-white" <?php sws_set_selected( 'double-whell-with-shadow.gif' ); ?>>Double whell with shadow</option>
+									<option value="rotating-ball-loading.gif" class="sws-preloader-light-grey" <?php sws_set_selected( 'rotating-ball-loading.gif' ); ?>>Rotating ball loading</option>
+									<option value="planet-earth.gif" class="sws-preloader-pale-blue" <?php sws_set_selected( 'planet-earth.gif' ); ?>>Planet Earth</option>
+									<option value="hexagonal-fractal.gif" class="sws-preloader-pale-blue" <?php sws_set_selected( 'hexagonal-fractal.gif' ); ?>>Hexagonal fractal</option>
 								</optgroup>
 								<optgroup label="Juicy background">
 									<option value="planet-and-spaceship.gif" class="sws-preloader-gray-blue" <?php sws_set_selected( 'planet-and-spaceship.gif' ); ?>>Planet & spaceship</option>
@@ -139,6 +149,7 @@ function sws_option_page(){
 									<option value="black-squid.gif" class="sws-preloader-dirty-blue" <?php sws_set_selected( 'black-squid.gif' ); ?>>Black squid</option>
 									<option value="running-rabbit.gif" class="sws-preloader-purple" <?php sws_set_selected( 'running-rabbit.gif' ); ?>>Running Rabbit</option>
 									<option value="african-woman-with-child.gif" class="sws-preloader-green" <?php sws_set_selected( 'african-woman-with-child.gif' ); ?>>African woman with child</option>
+									<option value="changing-shapes.gif" class="sws-preloader-green" <?php sws_set_selected( 'changing-shapes.gif' ); ?>>Changing shapes</option>
 								</optgroup>
 							</select>
 						</th>
@@ -158,6 +169,11 @@ function sws_option_page(){
 					  			<option value="snake.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'snake.gif' ); ?>>Snake</option>
 					  			<option value="thin-circle.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'thin-circle.gif' ); ?>>Thin circle</option>
 					  			<option value="small-thin-circle.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'small-thin-circle.gif' ); ?>>Small thin circle</option>
+					  			<option value="warm-flying-spheres.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'warm-flying-spheres.gif' ); ?>>Warm flying spheres</option>
+					  			<option value="white-whell-in-blue-circle.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'white-whell-in-blue-circle.gif' ); ?>>White whell in blue circle</option>
+					  			<option value="orange-thick-whell.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'orange-thick-whell.gif' ); ?>>Orange thick whell</option>
+					  			<option value="green-thick-whell.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'green-thick-whell.gif' ); ?>>Green thick whell</option>
+					  			<option value="dots-sparkling.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'dots-sparkling.gif' ); ?>>Dots sparkling</option>
 							</select>
 							<input type="text" id="sws-preloader-bg-color" name="sws_preloader_options[bg_color]" value="<?php echo $options['bg_color']; ?>" class="sws-color-picker" />
 						</th>
