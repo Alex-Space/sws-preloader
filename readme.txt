@@ -29,10 +29,9 @@ Ofcourse! If I find something beautiful, I'll add that to this plugin. If you ha
 
 == Screenshots ==
 
-1. screenshot-1.jpg - Where you can find plugin options.
-2. screenshot-2.jpg - List of preloaders - "With background".
-3. screenshot-3.jpg - List of preloaders - "Without background".
-4. screenshot-4.jpg - You can download your own preloader.
+1. List of preloaders - "With background".
+2. List of preloaders - "Without background".
+3. You can download your own preloader.
 
 == Changelog ==
 
