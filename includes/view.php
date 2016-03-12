@@ -11,10 +11,37 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 		
 		switch ( $image_with_bg ) {
 			
+			case 'green-sphere-cutting.gif':
+			case 'apple.gif':
 			case 'yellow-r.gif':
+			case 'infinity-blinking.gif':
+			case 'stone-circle.gif':
+			case 'star.gif':
 				$bg_color = '#000';
 				break;
 
+			case 'house-and-fishman.gif':
+			case 'spaceship-flight.gif':
+			case 'shape-moving.gif':
+			case 'spot-blinking.gif':
+			case 'something-in-the-house.gif':
+			case 'tools.gif':
+			case 'ufo-and-phone-booth.gif':
+			case 'triangle-to-square.gif':
+			case 'monster-eats-a-bird.gif':
+			case 'house-threw-a-man.gif':
+			case 'many-half-moons.gif':
+			case 'diamond-sharing.gif':
+			case 'buth-loading.gif':
+			case 'birdhouse-for-giants.gif':
+			case 'blue-cutted-circle.gif':
+			case 'cassette.gif':
+			case 'orange-arrow-circle.gif':
+			case 'products-to-the-cart.gif':
+			case 'boards-loading.gif':
+			case 'art-tool.gif':
+			case 'cloud-in-bottle.gif':
+			case 'clock-loading.gif':
 			case 'two-iridescent-drops.gif':
 			case 'lazy-human-dance.gif':
 			case 'runing-clock.gif':
@@ -26,6 +53,8 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 			case 'waves-triange.gif':
 			case 'geometric-shapes-transformation.gif':
 			case 'loading-and-a-ball.gif':
+			case 'shapes-changing.gif':
+			case 'firefox.gif':
 				$bg_color = '#fff';
 				break;
 
@@ -33,14 +62,82 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 				$bg_color = '#fffffb';
 				break;
 			
+			case 'kitten-enjoing.gif':
+				$bg_color = '#66ceff';
+				break;
+			
+			case 'map-marker-hiding.gif':
+				$bg_color = '#17a98f';
+				break;
+			
+			case 'white-thick-circle.gif':
+				$bg_color = '#02c4fc';
+				break;
+			
+			case 'plant-in-pot.gif':
+				$bg_color = '#fff3e1';
+				break;
+			
+			case 'white-fractal-ring.gif':
+				$bg_color = '#14d3a0';
+				break;
+			
+			case 'red-dwelling.gif':
+				$bg_color = '#f6f5f3';
+				break;
+			
+			case 'time-and-money.gif':
+				$bg_color = '#fcfbed';
+				break;
+			
 			case 'fire.gif':
 				$bg_color = '#18191b';
+				break;
+			
+			case 'gnu-loader.gif':
+				$bg_color = '#1a87c5';
+				break;
+			
+			case 'icecream.gif':
+				$bg_color = '#ffefcf';
+				break;
+			
+			case 'falling-drop-and-wheel.gif':
+				$bg_color = '#fffce4';
+				break;
+			
+			case 'fox-fun-walk.gif':
+				$bg_color = '#6a516a';
+				break;
+			
+			case 'compass-loading.gif':
+				$bg_color = '#3d73a5';
+				break;
+			
+			case 'falling-drop-and-wheel.gif':
+				$bg_color = '#3d73a5';
+				break;
+			
+			case 'beer.gif':
+				$bg_color = '#5db596';
+				break;
+				
+			case 'click-to-load-button.gif':
+				$bg_color = '#83af9b';
 				break;
 				
 			case 'fire-2.gif':
 				$bg_color = '#100010';
 				break;
-			
+		
+			case 'cat-with-headphones.gif':
+				$bg_color = '#976d9e';
+				break;
+	
+			case 'running-cat.gif':
+				$bg_color = '#2c9ecc';
+				break;
+
 			case 'rotating-ball-loading.gif':
 				$bg_color = '#dee1e2';
 				break;

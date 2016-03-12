@@ -15,7 +15,7 @@ When your website is taking too long to respond the best solution after file opt
 
 == Installation ==
 
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
+1. Upload preloader-sws to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go to Settings -> Preloader SWS
 4. Select a preloader and save your choice
@@ -23,7 +23,7 @@ When your website is taking too long to respond the best solution after file opt
 
 == Frequently Asked Questions ==
 
-= I want a lot of new preloader in your plugin! Specially for black background(for example). Are you going to add something new? =
+= I want a lot of new preloaders in your plugin! Specially for black background(for example). Are you going to add something new? =
 
 Ofcourse! If I find something beautiful, I'll add that to this plugin. If you have something to offer please contact me through the email - spwanderer@mail.ru. I will add that!
 

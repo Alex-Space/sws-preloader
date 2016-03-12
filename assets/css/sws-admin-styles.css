@@ -30,6 +30,10 @@
 	background: #ff7c61;
 }
 
+.sws-preloader-blue:before {
+	background: #2c9ecc;
+}
+
 .sws-preloader-orange:before {
 	background: #e19a2e;
 }
@@ -54,12 +58,40 @@
 	background: #00172a;
 }
 
+.sws-preloader-soap-green:before {
+	background: #5db596;
+}
+
 .sws-preloader-light-green:before {
 	background: #c4ebe8;
 }
 
 .sws-preloader-pale-blue:before {
 	background: #e3f4fd;
+}
+
+.sws-preloader-pale-green:before {
+	background: #83af9b;
+}
+
+.sws-preloader-biege:before {
+	background: #fffce4;
+}
+
+.sws-preloader-pale-purple:before {
+	background: #6a516a;
+}
+
+.sws-preloader-salad-green:before {
+	background: #14d3a0;
+}
+
+.sws-preloader-sky-blue:before {
+	background: #66ceff;
+}
+
+.sws-preloader-ligh-gray:before {
+	background: #f6f5f3;
 }
 
 .sws-preloader-white:before {
