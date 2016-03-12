@@ -1,7 +1,10 @@
 jQuery(window).load(function() {
-  function hidePreloader() {
-    jQuery('.preloader').fadeOut(500);
-    jQuery('html').css("cssText", "overflow: visible !important;");
-  }
-  setTimeout( hidePreloader, 1500); 
+	var $ = jQuery;
+	var $preloader = $('.sws-preloader');
+	function hidePreloader() {
+		$preloader.fadeOut(500);
+		$('html').css("cssText", "overflow: visible !important;");
+	}
+	var preloaderDelayTime = $preloader.data('delay');
+	setTimeout( hidePreloader, preloaderDelayTime ); 
 });

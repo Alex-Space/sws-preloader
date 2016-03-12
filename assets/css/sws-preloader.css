@@ -2,7 +2,7 @@ html {
   overflow: hidden !important;
 }
 
-.preloader {
+.sws-preloader {
   position: fixed;
   margin: auto;
   left: 0;

@@ -1,17 +1,21 @@
 (function( $ ) {
- 
-    /**
-	 * Add Color Picker to options page
-	 */
-    $(function() {
-        $('.sws-color-picker').wpColorPicker();
-    });
-
-    /**
-     * Select 2 to select for choose preloader
-     */
-	$(function() {
-
+    $(function( $ ) {
+	    /**
+		 * Add Color Picker to options page
+		 */
+	    $('.sws-color-picker').wpColorPicker({
+	    	change: function( event, ui ) {
+	    		if ( $('.nav-tab-wrapper').data('tab') === 'without_bg' ) {
+	    			$('.preloader-preview-box').css({
+	    				background: ui.color.toString(),
+	    			})
+	    		}
+	    	}
+	    });
+	    
+	    /**
+	     * Select 2 to select for choose preloader
+	     */
 		function swsColorBox(name) {
 		  if ( ! name.id || name.element.className === 'sws-no-bg-preloader' ) { return name.text; }
 		  var $name = $('<span class="sws-select-color-box ' + name.element.className + '">' + name.text + '</span>');
@@ -24,12 +28,10 @@
 			templateSelection: swsColorBox,
 			minimumResultsForSearch: -1
 		});
-	});
 
-	/**
-	 * Upload button
-	 */
-	$(function() {
+		/**
+		 * Upload button
+		 */
 		$('.sws-button-select-file').on('click', function(event) {
 			event.preventDefault();
 			$('#sws-preloader-custom-file').trigger('click');
@@ -37,5 +39,44 @@
 		$('#sws-preloader-custom-file').on('change', function(event) {
 			$('.condition').text( $(this).val() );
 		});
-	});
+
+		/**
+		 * Preview preloader
+		 */
+		$('select[name="sws_preloader_options[with_bg]"], select[name="sws_preloader_options[without_bg]"').on( 'change' , function(event) {
+			var tab = $('.nav-tab-wrapper').data('tab');
+			
+			if ( $(this).attr('name') === 'sws_preloader_options[with_bg]' ) {
+				// Preloader with bg
+				var preloader = $('select[name="sws_preloader_options[with_bg]"]').val();
+			} else if ( $(this).attr('name') === 'sws_preloader_options[without_bg]') {
+				// Preloader without bg
+				var preloader = $('select[name="sws_preloader_options[without_bg]"]').val();
+			}
+			$.ajax({
+				url: ajaxurl,
+				type: 'POST',
+				data: {
+					action: 'sws_ajax_preloader_preview',
+					preloader: preloader,
+					tab: tab
+				},
+			})
+			.done(function( data ) {
+				$('.preview-with-bg .preloader-preview-box').fadeOut( 150, function(){
+					$('.preview-with-bg .preloader-preview-box').empty();
+					$('.preview-with-bg .preloader-preview-box').html( data );
+					$('.preview-with-bg .preloader-preview-box').fadeIn( 150 );
+				});
+			})
+			.fail(function() {
+				console.log("error");
+			})
+			.always(function() {
+				console.log("complete");
+			});
+			
+		});
+		
+	}); // ready
 })( jQuery );

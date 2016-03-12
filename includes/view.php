@@ -7,7 +7,7 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 		$options = get_option( 'sws_preloader_options' );
 		$image_with_bg = $options['with_bg'];
 		$image_without_bg = $options['without_bg'];
-		$image_custom = $options['url'];
+		$url = $options['url'];
 		
 		switch ( $image_with_bg ) {
 			
@@ -268,23 +268,20 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 				break;
 		}
 
-		if ( ! empty( $image_with_bg ) ) {
-			
-			$preloader = '<div style="background: ' . $bg_color . ' url(' . plugins_url('assets/img/bg-true/' . $image_with_bg, __DIR__) . ') no-repeat center;" class="preloader"></div>';
-			echo $preloader;
+		$delay = ( ! empty ( $options['sws-preloader-timeout'] ) ) ? $options['sws-preloader-timeout'] : 1000;
 
+		if ( ! empty( $image_with_bg ) ) {
+			$url = plugins_url('assets/img/bg-true/' . $image_with_bg, __DIR__);
 		} elseif ( ! empty( $image_without_bg ) ) {
 			$bg_color = $options['bg_color'];
-			$preloader = '<div style="background: ' . $bg_color . ' url(' . plugins_url('assets/img/bg-false/' . $image_without_bg, __DIR__) . ') no-repeat center;" class="preloader"></div>';
-			echo $preloader;
-
-		} elseif ( ! empty( $image_custom ) ) {
-
+			$url = plugins_url('assets/img/bg-false/' . $image_without_bg, __DIR__);
+		} elseif ( ! empty( $url ) ) {
 			$bg_color = $options['custom_bg_color'];
-			$preloader = '<div style="background: ' . $bg_color . ' url(' . $image_custom . ') no-repeat center;" class="preloader"></div>';
-			echo $preloader;
-
 		}
+
+		$preloader = '<div style="background: ' . $bg_color . ' url(' . $url . ') no-repeat center;" class="sws-preloader" data-delay="'. $delay . '"></div>';
+		
+		echo $preloader;
 
 	}
 	add_action( 'wp_head', 'sws_add_preloader_to_frontend' );

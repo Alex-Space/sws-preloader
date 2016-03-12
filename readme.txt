@@ -35,5 +35,10 @@ Ofcourse! If I find something beautiful, I'll add that to this plugin. If you ha
 
 == Changelog ==
 
+= 1.1 =
+* Added more than 30 preloaders
+* Added possibility to preview preloaders in plugin options page
+* Added new settings section. And the first setting: delay time after page loaded
+
 = 1.0 =
-* First version.
+* First release

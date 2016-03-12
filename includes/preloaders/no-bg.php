@@ -15,9 +15,9 @@
 		<option value="green-thick-whell.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'green-thick-whell.gif' ); ?>>Green thick whell</option>
 		<option value="dots-sparkling.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'dots-sparkling.gif' ); ?>>Dots sparkling</option>
 		<option value="half-light-blue-whell.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'half-light-blue-whell.gif' ); ?>>Half light blue whell</option>
-    <option value="red-whell.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'red-whell.gif' ); ?>Red whell</option>
-    <option value="blue-dot-miltiplies.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'blue-dot-miltiplies.gif' ); ?>Blue dot miltiplies</option>
-    <option value="pegas-and-dotted-circle.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'pegas-and-dotted-circle.gif' ); ?>Pegas and dotted circle</option>
-		<option value="square-multiplies.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'square-multiplies.gif' ); ?>Square multiplies</option>
+    <option value="red-whell.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'red-whell.gif' ); ?>>Red whell</option>
+    <option value="blue-dot-miltiplies.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'blue-dot-miltiplies.gif' ); ?>>Blue dot miltiplies</option>
+    <option value="pegas-and-dotted-circle.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'pegas-and-dotted-circle.gif' ); ?>>Pegas and dotted circle</option>
+		<option value="square-multiplies.gif" class="sws-no-bg-preloader" <?php sws_set_selected( 'square-multiplies.gif' ); ?>>Square multiplies</option>
 
 </select>

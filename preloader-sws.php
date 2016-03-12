@@ -1,9 +1,9 @@
 <?php
 /**
 * Plugin Name: Preloader SWS
-* Description: Add preloader to your website. This plugin gives a lot of cool preloaders. But if you want, you can select preloader from your computer.
-* Version: 1.0
-* Author: Alex Space (SWS - SpaceWorkSpace)
+* Description: Add preloader to your website. This plugin gives to select a lot of cool preloaders (100+). Most of them are extremely awesome! Some of them even support background changing. Also you can upload your own preloader from computer and choose a background color.
+* Version: 1.1
+* Author: Alex Space
 * Author URI: spwanderer@mail.ru
 */
 
