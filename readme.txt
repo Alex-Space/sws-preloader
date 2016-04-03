@@ -7,7 +7,7 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Choose a preloader for your website. There are different types of it in this plugin.
+Add preloader to your website. This plugin gives to select a lot of cool preloaders (100+). Most of them are extremely awesome! Some of them even support background changing. Also you can upload your own preloader from computer and choose a background color.
 
 == Description ==
 
@@ -34,6 +34,9 @@ Ofcourse! If I find something beautiful, I'll add that to this plugin. If you ha
 3. You can download your own preloader.
 
 == Changelog ==
+
+= 1.2 =
+* Added new option "Activate only for frontpage"
 
 = 1.1 =
 * Added more than 30 preloaders

@@ -5,6 +5,7 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 	
 	function sws_add_preloader_to_frontend() {
 		$options = get_option( 'sws_preloader_options' );
+		$only_frontpage = $options['sws-preloader-only-frontpage'];
 		$image_with_bg = $options['with_bg'];
 		$image_without_bg = $options['without_bg'];
 		$url = $options['url'];
@@ -281,7 +282,11 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 
 		$preloader = '<div style="background: ' . $bg_color . ' url(' . $url . ') no-repeat center;" class="sws-preloader" data-delay="'. $delay . '"></div>';
 		
-		echo $preloader;
+		if ( $only_frontpage === 0 ) {
+			echo $preloader;
+		} elseif ( $only_frontpage === '1' ) {
+			if ( is_front_page() || is_home() ) echo $preloader;
+		}
 
 	}
 	add_action( 'wp_head', 'sws_add_preloader_to_frontend' );

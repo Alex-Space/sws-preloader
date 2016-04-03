@@ -1,13 +1,5 @@
 <?php
 /**
- * Debug function
- */
-function pr( $val ) {
-	echo "<pre>";
-	print_r( $val );
-	echo "</pre>";
-}
-/**
  * Register options page
  */
 function sws_preloader_options() {
@@ -27,6 +19,7 @@ function sws_preloader_register_settings(){
  * Sanitize all fields
  */
 function sws_preloader_sanitize_options( $new_options ) {
+
 	$clean_options = array();
 	$old_options = get_option( 'sws_preloader_options' );
 	
@@ -36,6 +29,8 @@ function sws_preloader_sanitize_options( $new_options ) {
 	} elseif ( ! empty( $old_options['sws-preloader-timeout'] ) ) {
 		$clean_options['sws-preloader-timeout'] = $old_options['sws-preloader-timeout'];
 	}
+
+	$clean_options['sws-preloader-only-frontpage'] = empty( $new_options['sws-preloader-only-frontpage'] ) ? 0 : 1;
 
 	if ( ! empty( $_FILES['sws-preloader-custom-file']['tmp_name'] ) ) {
 
@@ -69,7 +64,7 @@ function sws_preloader_sanitize_options( $new_options ) {
 	} elseif ( isset( $file ) && isset( $old_options['url'] ) && $file['url'] !== $old_options['url'] ) {
 		unlink( $old_options['file'] );
 	}
-
+	
 	return $clean_options;
 }
 
@@ -92,10 +87,6 @@ function sws_set_selected( $value, $func_type = true ) {
 	} else {
 		echo ( $options[$type] === $value ) ? 'selected="true"' : '';
 	}
-}
-
-function sws_get_selected() {
-	
 }
 
 /**
@@ -259,6 +250,7 @@ function sws_option_page(){
 						</th>
 					</tr>
 				<?php elseif ( $active_tab === 'settings' ) : ?>
+					<!-- Settings section -->
 					<tr>
 						<th>
 							How long it should be active<br> 
@@ -267,6 +259,14 @@ function sws_option_page(){
 						<td>
 							<?php $timeout = ( ! empty( $options['sws-preloader-timeout'] ) ) ? $options['sws-preloader-timeout'] : 1000; ?>
 							<input type="number" id="sws-preloader-timeout" name="sws_preloader_options[sws-preloader-timeout]" value="<?php echo $timeout ?>" class="small-text" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							Activate only for frontpage
+						</th>
+						<td>
+							<input type="checkbox" id="sws-preloader-only-frontpage" name="sws_preloader_options[sws-preloader-only-frontpage]" <?php echo ( $options['sws-preloader-only-frontpage'] == '1' ) ? 'checked="checked"' : ''; ?> value="1"/>
 						</td>
 					</tr>
 					<tr>
