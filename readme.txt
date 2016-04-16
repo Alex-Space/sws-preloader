@@ -13,6 +13,15 @@ Add preloader to your website. This plugin gives to select a lot of cool preload
 
 When your website is taking too long to respond the best solution after file optimization is preloader. Preloader is a beauty image with animation that relaxing site visitors. Thay don't see website loading process when HTML forming. There are a lot of cute preloader in this plugin, specially in "With background" section.
 
+This plugin provides:
+
+* More than 100 beautiful preloaders
+* Possibility to upload your own preloader
+* Possibility to do not remove preloader for needed time after page loaded
+* Set preloader only for homepage
+* Easy to use and simple to config
+* Cross-browser & responsive
+
 == Installation ==
 
 1. Upload preloader-sws to the `/wp-content/plugins/` directory
@@ -31,9 +40,13 @@ Ofcourse! If I find something beautiful, I'll add that to this plugin. If you ha
 
 1. List of preloaders - "With background".
 2. List of preloaders - "Without background".
-3. You can download your own preloader.
+3. You can upload your own preloader.
 
 == Changelog ==
+
+= 1.2.1 =
+Fixed preview bugs in admin panel
+Fixed formalization at wordpress.org
 
 = 1.2 =
 * Added new option "Activate only for frontpage"

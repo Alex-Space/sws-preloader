@@ -113,6 +113,8 @@ function sws_the_preloader_preview() {
 		<img src="<?php echo plugins_url( 'assets/img/bg-true/' . $options['with_bg'], __DIR__ ); ?>" alt="">
 	<?php elseif ( ! empty( $options['without_bg'] ) ) : ?>
 		<img src="<?php echo plugins_url( 'assets/img/bg-false/' . $options['without_bg'], __DIR__ ); ?>" alt="">
+	<?php else : ?>
+		<img src="<?php echo plugins_url( 'assets/img/bg-true/drop.gif', __DIR__ ); ?>" alt="">
 	<?php endif;
 
 }
