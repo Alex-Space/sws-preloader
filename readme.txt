@@ -7,11 +7,11 @@ Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add preloader to your website. This plugin gives to select a lot of cool preloaders (100+). Most of them are extremely awesome! Some of them even support background changing. Also you can upload your own preloader from computer and choose a background color.
+Add preloader to your website when your pages is getting too much time to load. This plugin gives to select a lot of cool preloaders (100+).
 
 == Description ==
 
-When your website is taking too long to respond the best solution after file optimization is preloader. Preloader is a beauty image with animation that relaxing site visitors. Thay don't see website loading process when HTML forming. There are a lot of cute preloader in this plugin, specially in "With background" section.
+When your website is taking too long to respond the best solution after file optimization is preloader. Preloader is a beauty image with animation that relaxing site visitors. They don't see website loading process when HTML forming. There are a lot of cute preloader in this plugin, specially in "With background" section.
 
 This plugin provides:
 
@@ -45,8 +45,8 @@ Ofcourse! If I find something beautiful, I'll add that to this plugin. If you ha
 == Changelog ==
 
 = 1.2.1 =
-Fixed preview bugs in admin panel
-Fixed formalization at wordpress.org
+* Fixed preview bugs in admin panel
+* Fixed formalization at wordpress.org
 
 = 1.2 =
 * Added new option "Activate only for frontpage"

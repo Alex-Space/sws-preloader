@@ -279,5 +279,9 @@ function sws_option_page(){
 		</form>
 
 	</div>
+	<div>
+		<h2>Do you like this plugin?</h2>
+		<p><a href="https://wordpress.org/support/view/plugin-reviews/preloader-sws#postform" target="_blank">Please give it a 5 star rating</a> on WordPress.org.</p>
+	</div>
 	<?php
 }
