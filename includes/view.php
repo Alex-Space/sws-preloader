@@ -5,10 +5,13 @@ if ( ! is_admin() && ! preg_match("/wp-login/i", $_SERVER['REQUEST_URI'] ) ) {
 	
 	function sws_add_preloader_to_frontend() {
 		$options = get_option( 'sws_preloader_options' );
-		$only_frontpage = $options['sws-preloader-only-frontpage'];
-		$image_with_bg = $options['with_bg'];
-		$image_without_bg = $options['without_bg'];
-		$url = $options['url'];
+		if ( isset( $options ) && ! empty( $options ) ) {
+			$only_frontpage = isset( $options['sws-preloader-only-frontpage'] ) ? $options['sws-preloader-only-frontpage'] : '';
+			$image_with_bg = isset( $options['with_bg'] ) ? $options['with_bg'] : '';
+			$image_without_bg = isset( $options['without_bg'] ) ? $options['without_bg'] : '';
+			$url = isset( $options['url'] ) ? $options['url'] : '';
+		}
+		
 		
 		switch ( $image_with_bg ) {
 			

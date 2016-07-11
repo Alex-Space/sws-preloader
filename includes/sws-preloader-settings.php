@@ -80,12 +80,12 @@ function sws_set_selected( $value, $func_type = true ) {
 		$type =  'with_bg';
 	} elseif ( isset( $options['upload_a_custom'] ) ) {
 		$type = 'upload_a_custom';
+	} else {
+		$type = '';
 	}
 
-	if ( $func_type === false ) {
+	if ( $func_type === false && isset( $options[$type] ) ) {
 		return ( $options[$type] === $value ) ? 'selected="true"' : '';
-	} else {
-		echo ( $options[$type] === $value ) ? 'selected="true"' : '';
 	}
 }
 
@@ -94,20 +94,27 @@ function sws_set_selected( $value, $func_type = true ) {
  */
 function sws_the_preloader_preview() {
 	$options = get_option( 'sws_preloader_options' );
-	$default_preloader = ( $_GET['tab'] === 'with_bg' && empty( $options['with_bg'] ) ) ? true : false;
+	
+	if ( isset( $_GET['tab'] ) && empty( $options['with_bg'] ) ) {
+		$default_preloader = ( $_GET['tab'] === 'with_bg' ) ? true : false;
+	} else {
+		$default_preloader = false;
+	}
 
-	if ( $_GET['tab'] === 'without_bg' && empty( $options['without_bg'] ) ) {
+	if ( isset( $_GET['tab'] ) && $_GET['tab'] === 'without_bg' && empty( $options['without_bg'] ) ) {
 		$preview = 'egg';
 	} elseif ( ! empty( $options['without_bg'] ) ) {
 		$preview = 'selecting';
+	} else {
+		$preview = null;
 	}
 
-	if (  $preview === 'egg' ) : ?>
+	if ( $preview === 'egg' ) : ?>
 		<img src="<?php echo plugins_url( 'assets/img/bg-false/blue-egg.gif', __DIR__ ); ?>" alt="">
 		<?php return; ?>
 	<?php endif;
 
-	if (  $default_preloader === true ) : ?>
+	if ( $default_preloader === true ) : ?>
 		<img src="<?php echo plugins_url( 'assets/img/bg-true/drop.gif', __DIR__ ); ?>" alt="">
 	<?php elseif ( ! empty( $options['with_bg'] ) ) : ?>
 		<img src="<?php echo plugins_url( 'assets/img/bg-true/' . $options['with_bg'], __DIR__ ); ?>" alt="">
@@ -147,7 +154,10 @@ add_action( 'wp_ajax_sws_ajax_preloader_preview', 'sws_ajax_preloader_preview' )
  */
 function sws_option_page(){
 		$options = get_option( 'sws_preloader_options' );
-		$type = $options['sws-preloader-type'];
+
+		if ( isset( $options['sws-preloader-type'] ) && ! empty( $options['sws-preloader-type'] ) ) {
+			$type = $options['sws-preloader-type'];
+		}
 
 		if ( isset( $_GET[ 'tab' ] ) ) {
 			$active_tab = $_GET[ 'tab' ];
@@ -160,7 +170,13 @@ function sws_option_page(){
 	?>
 	<div class="wrap">
 		<h2 class="dashicons-before sws-header-icon dashicons-update">Preloader SWS</h2>
-	    <?php $tab = $_GET['tab']; ?>
+	    <?php 
+		    if ( isset( $_GET['tab'] ) && ! empty( $_GET['tab'] ) ) {
+			    $tab = $_GET['tab']; 
+		    } else {
+		    	$tab = '';
+		    }
+	    ?>
 	    <h2 class="nav-tab-wrapper" data-tab="<?php echo $tab; ?>">
 	        <a href="?page=sws-preloader-options&tab=with_bg" class="nav-tab <?php echo ( $active_tab == 'with_bg' ) ? 'nav-tab-active' : ''; ?>" >With background</a>
 	        <a href="?page=sws-preloader-options&tab=without_bg" class="nav-tab <?php echo ( $active_tab == 'without_bg' ) ? 'nav-tab-active' : ''; ?>">Without background</a>
@@ -279,9 +295,16 @@ function sws_option_page(){
 		</form>
 
 	</div>
-	<div>
-		<h2>Do you like this plugin?</h2>
-		<p><a href="https://wordpress.org/support/view/plugin-reviews/preloader-sws#postform" target="_blank">Please give it a 5 star rating</a> on WordPress.org.</p>
+	<div class="sws-rating-box">
+	<br>
+	<br>
+	<br>
+	<br>
+		<h2>Thank you for using SWS Preloader! Do you like this plugin?</h2>
+		<p>
+			<a href="https://wordpress.org/support/view/plugin-reviews/preloader-sws#postform" class="button sws-rating-button" target="_blank"><i class="dashicons-before dashicons-smiley"></i>Yes</a>
+			<a href="https://wordpress.org/support/plugin/preloader-sws#postform" class="button sws-rating-button" target="_blank">No</a>
+		</p>
 	</div>
 	<?php
 }

@@ -119,6 +119,16 @@
 	margin-bottom: 0;
 }
 
+.sws-rating-box a.sws-rating-button {
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.sws-rating-box a i {
+	position: relative;
+	top: 3px;
+	padding-right: 5px;
+}
 /* Options table */
 
 .form-table th {
@@ -158,6 +168,12 @@
 	border: 2px solid #CCC;
 	box-sizing: border-box;
 	background: #fff;
+	overflow: hidden;
+	-webkit-transition: height 0.2s;
+	   -moz-transition: height 0.2s;
+	    -ms-transition: height 0.2s;
+	     -o-transition: height 0.2s;
+	        transition: height 0.2s;
 }
 
 .preloader-preview-box img {

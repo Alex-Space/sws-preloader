@@ -61,22 +61,30 @@
 					preloader: preloader,
 					tab: tab
 				},
+				beforeSend: function() {
+					swsSetProperHeight();
+				}
 			})
 			.done(function( data ) {
-				$('.preview-with-bg .preloader-preview-box').fadeOut( 150, function(){
-					$('.preview-with-bg .preloader-preview-box').empty();
+
+				$('.preview-with-bg .preloader-preview-box img').fadeOut( 150, function(){
+					var $box = $('.preview-with-bg .preloader-preview-box');
+
 					$('.preview-with-bg .preloader-preview-box').html( data );
-					$('.preview-with-bg .preloader-preview-box').fadeIn( 150 );
+					$('.preview-with-bg .preloader-preview-box img').hide();
+					$('.preview-with-bg .preloader-preview-box img').fadeIn( 150, function() {
+						swsSetProperHeight();
+					} );
 				});
-			})
-			.fail(function() {
-				console.log("error");
-			})
-			.always(function() {
-				console.log("complete");
+
 			});
 			
 		});
 		
 	}); // ready
+
+	function swsSetProperHeight() {
+		var $box = $('.preview-with-bg .preloader-preview-box');
+		$box.css('height', $box.find('img').height() + 24 + 'px' );
+	}
 })( jQuery );
