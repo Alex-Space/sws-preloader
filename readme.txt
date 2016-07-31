@@ -3,7 +3,7 @@ Contributors: AlexSpace
 Tags: preloader, loader, custom, customize
 Requires at least: 3.4.0
 Tested up to: 4.4
-Stable tag: 1.2
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ Ofcourse! If I find something beautiful, I'll add that to this plugin. If you ha
 3. You can upload your own preloader.
 
 == Changelog ==
+
+= 1.2.2 =
+* Fixed firs save bugs & variable notices 
 
 = 1.2.1 =
 * Fixed preview bugs in admin panel
