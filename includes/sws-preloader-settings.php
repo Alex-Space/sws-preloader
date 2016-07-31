@@ -83,9 +83,11 @@ function sws_set_selected( $value, $func_type = true ) {
 	} else {
 		$type = '';
 	}
-
+	
 	if ( $func_type === false && isset( $options[$type] ) ) {
 		return ( $options[$type] === $value ) ? 'selected="true"' : '';
+	} else {
+		echo ( $options[$type] === $value ) ? 'selected="true"' : '';
 	}
 }
 
